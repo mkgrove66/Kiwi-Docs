@@ -16,7 +16,7 @@ test('test', async ({ page }) => {
     await page.locator('#page-login-index').press('ControlOrMeta+r');
     await page.waitForTimeout(750);
     await page.getByPlaceholder('Password').click();
-    await page.getByPlaceholder('Password').fill('$s6E4U&K5IUllg8c');
+    await page.getByPlaceholder('Password').fill('12qwaszx!@QWASZX');
     await page.waitForTimeout(750);
     await page.getByRole('button', { name: 'Log in' }).click();
     await page.waitForTimeout(750);
@@ -32,7 +32,7 @@ test('test', async ({ page }) => {
     await page.getByPlaceholder('Username').fill('automation_test');
     await page.waitForTimeout(750);
     await page.getByPlaceholder('Password').click();
-    await page.getByPlaceholder('Password').fill('$s6E4U&K5IUllg8c');
+    await page.getByPlaceholder('Password').fill('12qwaszx!@QWASZX');
     await page.waitForTimeout(750);
     await page.getByRole('button', { name: 'Log in' }).click();
     await page.waitForTimeout(750);
