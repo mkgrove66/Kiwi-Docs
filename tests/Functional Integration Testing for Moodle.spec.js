@@ -24,9 +24,9 @@ test('test', async ({ page }) => {
     await page.waitForTimeout(750);
     // await page.locator('#page-login-index').press('ControlOrMeta+r');
     // UC-001
-    await page.getByLabel('User menu').click();
+    await page.getByLabel('Automation Tester').click();
     await page.waitForTimeout(750);
-    await page.pause();
+    // await page.pause();
     await page.getByRole('menuitem', { name: 'Log out' }).click();
     await page.waitForTimeout(750);
     // UC-002
