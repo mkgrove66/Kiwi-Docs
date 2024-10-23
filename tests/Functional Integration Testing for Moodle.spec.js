@@ -8,25 +8,28 @@ test.use({
 });
 
 test('test', async ({ page }) => {
-    test.setTimeout(360000);
+    // test.setTimeout(360000);
     await page.goto('https://learn-doc.test.josce.mil/moodle/login/index.php?saml=off');
     // VF-001
     await page.getByPlaceholder('Username').click();
     await page.getByPlaceholder('Username').fill('automation_test ');
     await page.locator('#page-login-index').press('ControlOrMeta+r');
     await page.waitForTimeout(750);
+    // await page.pause();
     await page.getByPlaceholder('Password').click();
     await page.getByPlaceholder('Password').fill('12qwaszx!@QWASZX');
     await page.waitForTimeout(750);
+    // await page.pause();
     await page.getByRole('button', { name: 'Log in' }).click();
     await page.waitForTimeout(750);
     // await page.locator('#page-login-index').press('ControlOrMeta+r');
     // UC-001
-    await page.getByRole(' button ', { name: 'User menu' }).click();
+    await page.getByLabel('User menu').click();
     await page.waitForTimeout(750);
+    await page.pause();
     await page.getByRole('menuitem', { name: 'Log out' }).click();
     await page.waitForTimeout(750);
-    // // UC-002
+    // UC-002
     await page.goto('https://learn-doc.test.josce.mil/moodle/login/index.php?saml=off');
     await page.getByPlaceholder('Username').click();
     await page.getByPlaceholder('Username').fill('automation_test');
