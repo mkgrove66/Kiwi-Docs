@@ -49,16 +49,16 @@ test('test', async ({ page }) => {
     await page.waitForTimeout(750);
     await page.getByRole('link', { name: 'Common Unit Training Manager' }).click();
     await page.waitForTimeout(750);
-    // await page.getByRole('cell', { name: 'Potential users   Search Clear' }).getByLabel('Search').click();
-    // await page.waitForTimeout(750);
-    // await page.getByRole('cell', { name: 'Potential users   Search Clear' }).getByLabel('Search').fill('Michael Grove');
-    // await page.waitForTimeout(750);
-    // await page.getByRole('cell', { name: 'Potential users   Search' }).getByLabel('Search').press('Enter');
-    // await page.waitForTimeout(50000);
-    // await page.getByLabel('Potential users').selectOption('1195852');
+    await page.getByRole('cell', { name: 'Potential users   Search Clear' }).getByLabel('Search').click();
+    await page.waitForTimeout(750);
+    await page.getByRole('cell', { name: 'Potential users   Search Clear' }).getByLabel('Search').fill('Michael Grove');
+    await page.waitForTimeout(750);
+    await page.getByRole('cell', { name: 'Potential users   Search' }).getByLabel('Search').press('Enter');
+    await page.waitForTimeout(50000);
+    await page.getByLabel('Potential users').selectOption('1195852');
+    await page.waitForTimeout(750);
     // await page.getByRole('button', { name: '◄ Add' }).click();
     // await page.waitForTimeout(42000)
-
     // await page.goto('https://learn-doc.test.josce.mil/moodle/admin/roles/assign.php?contextid=1&roleid=24');
     // await page.locator('#addselect_clearbutton').click();
     // await page.getByRole('cell', { name: 'Existing users   Search Clear' }).getByLabel('Search', { exact: true }).click();
