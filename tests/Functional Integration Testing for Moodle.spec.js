@@ -18,10 +18,10 @@ test('test', async ({ page }) => {
     await page.getByPlaceholder('Password').click();
     await page.getByPlaceholder('Password').fill('12qwaszx!@QWASZX');
     await page.getByRole('button', { name: 'Log in' }).click();
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(1000);
     // UC-001
     await page.getByLabel('Automation Tester').click();
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(1000);
     await page.getByRole('menuitem', { name: 'Log out' }).click();
     await page.waitForTimeout(2000);
     // // UC-002
