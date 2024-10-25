@@ -20,21 +20,21 @@ test('test', async ({ page }) => {
     await page.getByRole('button', { name: 'Log in' }).click();
     await page.waitForTimeout(1000);
     // UC-001
-    await page.getByLabel('User menu').click();
-    await page.waitForTimeout(1000);
-    await page.getByRole('menuitem', { name: 'Log out' }).click();
-    await page.waitForTimeout(1000);
+    // await page.getByLabel('User menu').click();
+    // await page.waitForTimeout(1000);
+    // await page.getByRole('menuitem', { name: 'Log out' }).click();
+    // await page.waitForTimeout(1000);
     // // UC-002
-    await page.goto('https://learn-doc.test.josce.mil/moodle/login/index.php?saml=off');
-    page.getByPlaceholder('Username');
-    await page.waitForTimeout(500);
-    await page.getByPlaceholder('Username').fill('automation_test');
-    await page.waitForTimeout(500);
-    await page.getByPlaceholder('Password').click();
-    await page.getByPlaceholder('Password').fill('12qwaszx!@QWASZX');
-    await page.waitForTimeout(500);
-    await page.getByRole('button', { name: 'Log in' }).click();
-    await page.waitForTimeout(500);
+    // await page.goto('https://learn-doc.test.josce.mil/moodle/login/index.php?saml=off');
+    // page.getByPlaceholder('Username');
+    // await page.waitForTimeout(500);
+    // await page.getByPlaceholder('Username').fill('automation_test');
+    // await page.waitForTimeout(500);
+    // await page.getByPlaceholder('Password').click();
+    // await page.getByPlaceholder('Password').fill('12qwaszx!@QWASZX');
+    // await page.waitForTimeout(500);
+    // await page.getByRole('button', { name: 'Log in' }).click();
+    // await page.waitForTimeout(500);
     await page.locator('#modalFlowBot').getByText('×').click();
     await page.waitForTimeout(1000);
     await page.getByRole('menuitem', { name: 'Site administration' }).click();
