@@ -20,10 +20,10 @@ test('test', async ({ page }) => {
     await page.getByRole('button', { name: 'Log in' }).click();
     await page.waitForTimeout(1000);
     // UC-001
-    await page.getByLabel('Automation Tester').click();
+    await page.getByLabel('User menu').click();
     await page.waitForTimeout(1000);
     await page.getByRole('menuitem', { name: 'Log out' }).click();
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(1000);
     // // UC-002
     await page.goto('https://learn-doc.test.josce.mil/moodle/login/index.php?saml=off');
     page.getByPlaceholder('Username');
@@ -36,7 +36,7 @@ test('test', async ({ page }) => {
     await page.getByRole('button', { name: 'Log in' }).click();
     await page.waitForTimeout(500);
     await page.locator('#modalFlowBot').getByText('×').click();
-    await page.waitForTimeout(1500);
+    await page.waitForTimeout(1000);
     await page.getByRole('menuitem', { name: 'Site administration' }).click();
     await page.waitForTimeout(500);
     await page.getByRole('tab', { name: 'Users' }).click();
