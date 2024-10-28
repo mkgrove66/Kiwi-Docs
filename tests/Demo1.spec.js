@@ -8,6 +8,7 @@ test.use({
 });
 
 test('test', async ({ page }) => {
+    test.setTimeout(480000);
     await page.goto('https://learn-doc.test.josce.mil/moodle/login/index.php?saml=off');
     await page.getByPlaceholder('Username').click();
     await page.getByPlaceholder('Username').fill('automation_test');

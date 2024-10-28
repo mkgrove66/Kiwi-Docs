@@ -58,12 +58,16 @@ test('test', async ({ page }) => {
     await page.goto('https://learn-doc.test.josce.mil/moodle/admin/roles/assign.php?contextid=1&roleid=24');
     await page.locator('#addselect_clearbutton').click();
     await page.getByRole('cell', { name: 'Existing users   Search Clear' }).getByLabel('Search', { exact: true }).click();
+    await page.waitForTimeout(500);
     await page.getByRole('cell', { name: 'Existing users   Search Clear' }).getByLabel('Search', { exact: true }).fill('Michael Grove');
+    await page.waitForTimeout(500);
     await page.getByRole('cell', { name: 'Existing users   Search Clear' }).getByLabel('Search', { exact: true }).press('Enter');
     await page.locator('#removeselect_clearbutton').click();
     await page.waitForTimeout(1000);
     await page.getByRole('cell', { name: 'Existing users   Search Clear' }).getByLabel('Search', { exact: true }).click();
+    await page.waitForTimeout(500);
     await page.getByRole('cell', { name: 'Existing users   Search Clear' }).getByLabel('Search', { exact: true }).fill('Michael Grove');
+    await page.waitForTimeout(500);
     await page.getByRole('cell', { name: 'Existing users   Search Clear' }).getByLabel('Search', { exact: true }).press('Enter');
     await page.getByLabel('Existing users').selectOption('1195852');
     await page.getByRole('button', { name: 'Remove ►' }).click();
