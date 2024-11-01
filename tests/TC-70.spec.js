@@ -18,7 +18,7 @@ test('test', async ({ page }) => {
     await page.waitForTimeout(750);
     await page.getByRole('button', { name: 'Log in' }).click();
     await page.waitForTimeout(750);
-    await page.locator('xpath=//*[@id="yui_3_18_1_1_1730320588579_18"]').click();
+    // await page.locator('xpath=//*[@id="yui_3_18_1_1_1730320588579_18"]').click();
     // await page.locator('#nav-bar :text("Toggle search input")').click();
     // await page.locator('article:has-text("Toggle search input")').click();
     // await page.getByRole('button', { name: 'Toggle search input' }).click();
