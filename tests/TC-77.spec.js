@@ -8,7 +8,7 @@ test.use({
 });
 
 test('test', async ({ page }) => {
-    test.setTimeout(120000);
+    test.setTimeout(60000);
     await page.goto('https://tftr.test.josce.mil/#/');
     await page.waitForTimeout(1000);
     await page.getByLabel('Username').click();
@@ -29,5 +29,5 @@ test('test', async ({ page }) => {
     await page.locator('a').filter({ hasText: 'MyTraining Test' }).click();
     await page.waitForTimeout(1000);
     await page.locator('a').filter({ hasText: 'Logout' }).click();
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(10000);
 });
